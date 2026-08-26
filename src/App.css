@@ -281,6 +281,7 @@
   font-size: 15px;
   line-height: 1.7;
   color: var(--text-muted);
+  text-align: left;
 }
 
 .modal-body h3 {
@@ -290,8 +291,26 @@
   margin: 20px 0 6px;
 }
 
+.modal-body h3:first-child {
+  margin-top: 0;
+}
+
 .modal-body p {
   margin: 0 0 8px;
+}
+
+.modal-body ul {
+  padding-left: 20px;
+  margin: 0 0 12px;
+  list-style-type: disc;
+}
+
+.modal-body li {
+  margin-bottom: 6px;
+}
+
+.modal-body strong {
+  color: var(--text);
 }
 
 /* ─── Responsive ─── */

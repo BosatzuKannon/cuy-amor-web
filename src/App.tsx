@@ -109,7 +109,7 @@ export default function App() {
           Términos y Condiciones
         </button>
         <span className="footer-sep">·</span>
-        <a className="footer-link" href="mailto:soporte@cuyamor.com">
+        <a className="footer-link" href="mailto:carlos87jaramillo@gmail.com">
           Contáctenos
         </a>
       </footer>
@@ -120,36 +120,88 @@ export default function App() {
         onClose={() => setPrivacyOpen(false)}
         title="Políticas de Privacidad"
       >
+        <h3>1. Información que Recopilamos</h3>
         <p>
-          En Cuy Amor valoramos y protegemos la privacidad de nuestros
-          usuarios. Esta política describe cómo recopilamos, usamos y
-          protegemos tu información personal cuando utilizas nuestra
-          plataforma.
+          Para que el motor de emparejamiento y la economía de la plataforma
+          funcionen, recopilamos:
         </p>
-        <h3>Información que recopilamos</h3>
+        <ul>
+          <li>
+            <strong>Datos de Perfil:</strong> Nombre, edad, género, fotografías
+            y preferencias de búsqueda.
+          </li>
+          <li>
+            <strong>Geolocalización:</strong> Ubicación precisa para habilitar
+            el filtro de distancia y el descubrimiento de perfiles cercanos.
+          </li>
+          <li>
+            <strong>Datos Financieros:</strong> Historial de compras de Cuy
+            Coins, suscripciones (Modo Cuy Ninja), y números de cuentas de
+            retiro (ej. Nequi) para el sistema de referidos.
+          </li>
+          <li>
+            <strong>Comunicaciones:</strong> Contenido de la sala de chat
+            operada en tiempo real e interacciones directas.
+          </li>
+        </ul>
+
+        <h3>2. Uso y Finalidad de los Datos</h3>
         <p>
-          Recopilamos información que usted nos proporciona directamente al
-          crear su perfil, como nombre, fecha de nacimiento, género,
-          fotografías, ubicación y preferencias. También recopilamos datos
-          de uso y interacciones dentro de la aplicación.
+          La información se utiliza estrictamente para operar y asegurar la
+          plataforma:
         </p>
-        <h3>Uso de la información</h3>
+        <ul>
+          <li>
+            Facilitar la conexión entre usuarios mediante algoritmos de
+            ubicación.
+          </li>
+          <li>
+            Procesar pagos, acreditar recompensas y gestionar solicitudes de
+            retiro de dinero de forma segura.
+          </li>
+          <li>
+            Mantener la integridad de la mensajería y prevenir fraudes,
+            suplantaciones o comportamientos abusivos.
+          </li>
+        </ul>
+
+        <h3>3. Compartición de Información</h3>
         <p>
-          Utilizamos su información para proporcionar y mejorar nuestros
-          servicios, personalizar su experiencia, facilitar conexiones con
-          otros usuarios y garantizar la seguridad de la plataforma.
+          No vendemos datos personales. Solo compartimos información con
+          terceros esenciales para la operatividad:
         </p>
-        <h3>Protección de datos</h3>
+        <ul>
+          <li>
+            <strong>Infraestructura:</strong> Servicios en la nube para alojar
+            bases de datos y servidores backend.
+          </li>
+          <li>
+            <strong>Pasarelas de Pago:</strong> Entidades financieras
+            autorizadas para procesar transacciones.
+          </li>
+          <li>
+            <strong>Autoridades:</strong> Cuando sea requerido legalmente para
+            investigaciones de seguridad y cumplimiento normativo.
+          </li>
+        </ul>
+
+        <h3>4. Derechos del Usuario y Retención</h3>
         <p>
-          Implementamos medidas de seguridad técnicas y organizativas para
-          proteger su información contra acceso no autorizado, alteración,
-          divulgación o destrucción.
+          Todo usuario tiene control total sobre su información personal en
+          cualquier momento:
         </p>
-        <h3>Contacto</h3>
-        <p>
-          Si tiene preguntas sobre esta política, contáctenos a través de
-          soporte@cuyamor.com.
-        </p>
+        <ul>
+          <li>
+            <strong>Derecho al Olvido:</strong> Mediante la opción de eliminar
+            cuenta, se ejecuta un borrado total que destruye permanentemente
+            fotos, chats y saldos de nuestros servidores.
+          </li>
+          <li>
+            <strong>Modificación:</strong> Los usuarios pueden actualizar sus
+            datos o revocar permisos de ubicación y notificaciones directamente
+            desde los ajustes de su dispositivo.
+          </li>
+        </ul>
       </Modal>
 
       <Modal
@@ -157,41 +209,83 @@ export default function App() {
         onClose={() => setTermsOpen(false)}
         title="Términos y Condiciones"
       >
+        <h3>1. Aceptación de los Términos</h3>
         <p>
-          Bienvenido a Cuy Amor. Al descargar o utilizar nuestra aplicación,
-          usted acepta los siguientes términos y condiciones. Por favor,
-          léelos detenidamente.
+          Al descargar, acceder o utilizar la aplicación Cuy Amor, usted
+          acepta estar sujeto a estos Términos y Condiciones. Solo se permite
+          el uso de la plataforma a personas mayores de 18 años.
         </p>
-        <h3>Aceptación de los términos</h3>
+
+        <h3>2. Economía Virtual (Cuy Coins y Suscripciones)</h3>
+        <ul>
+          <li>
+            Los 'Cuy Coins' son una moneda virtual exclusiva de la plataforma,
+            utilizada para adquirir funciones especiales (Cuyazos, Regalos,
+            Modo Cuy Ninja).
+          </li>
+          <li>
+            Todas las compras de Cuy Coins y suscripciones son finales y no
+            reembolsables.
+          </li>
+          <li>
+            Los Cuy Coins no tienen valor monetario en el mundo real y no
+            pueden ser canjeados por dinero en efectivo, salvo mediante el
+            sistema oficial de referidos.
+          </li>
+        </ul>
+
+        <h3>3. Sistema de Referidos y Retiros de Dinero</h3>
+        <ul>
+          <li>
+            Las comisiones generadas por el sistema de referidos (10% de la
+            primera compra) se acreditarán en el saldo de dinero real del
+            usuario.
+          </li>
+          <li>
+            El usuario podrá solicitar el retiro de sus fondos exclusivamente
+            a través de cuentas de Nequi, siempre y cuando el saldo mínimo
+            sea de 30.000 COP.
+          </li>
+          <li>
+            Cuy Amor se reserva el derecho de auditar, retener o cancelar
+            retiros si se detectan actividades fraudulentas, cuentas falsas o
+            manipulación del sistema.
+          </li>
+        </ul>
+
+        <h3>4. Conducta del Usuario</h3>
         <p>
-          Al acceder y utilizar Cuy Amor, usted acepta estar sujeto a estos
-          términos y condiciones. Si no está de acuerdo con alguno de estos
-          términos, no utilice la aplicación.
+          Los usuarios deben interactuar de manera respetuosa. Está
+          estrictamente prohibido:
         </p>
-        <h3>Cuenta de usuario</h3>
+        <ul>
+          <li>Acosar, intimidar o amenazar a otros usuarios.</li>
+          <li>Crear perfiles falsos o suplantar la identidad de terceros.</li>
+          <li>
+            Compartir contenido sexualmente explícito, ilegal, violento o
+            comercial (spam).
+          </li>
+        </ul>
         <p>
-          Usted es responsable de mantener la confidencialidad de su cuenta y
-          contraseña. Debe ser mayor de 18 años para crear una cuenta y
-          utilizar el servicio.
+          Cuy Amor se reserva el derecho de suspender o eliminar
+          permanentemente cualquier cuenta que viole estas normas, sin derecho
+          a reembolso.
         </p>
-        <h3>Conducta del usuario</h3>
+
+        <h3>5. Limitación de Responsabilidad</h3>
         <p>
-          Usted se compromete a no usar la aplicación para fines ilegales,
-          para acosar a otros usuarios, distribuir contenido inapropiado o
-          realizar cualquier actividad que pueda dañar la plataforma o a
-          otros usuarios.
+          La aplicación se proporciona 'tal cual'. Cuy Amor no garantiza la
+          compatibilidad, el éxito de los emparejamientos, ni se hace
+          responsable por las interacciones, encuentros físicos o conductas
+          de los usuarios fuera de la plataforma digital. Proceda siempre con
+          precaución en sus encuentros personales.
         </p>
-        <h3>Propiedad intelectual</h3>
+
+        <h3>6. Modificaciones</h3>
         <p>
-          Todo el contenido, diseño y funcionalidades de la aplicación son
-          propiedad de Cuy Amor y están protegidos por las leyes de
-          propiedad intelectual.
-        </p>
-        <h3>Limitación de responsabilidad</h3>
-        <p>
-          Cuy Amor no se hace responsable por las interacciones entre
-          usuarios fuera de la plataforma. El usuario es responsable de su
-          propia seguridad al encontrarse con otras personas.
+          Nos reservamos el derecho de modificar estos términos en cualquier
+          momento. Las actualizaciones se notificarán a través de la
+          aplicación o la página web oficial.
         </p>
       </Modal>
     </div>
