@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import googlePlayBtn from './assets/googleplay.png';
+//import googlePlayBtn from './assets/googleplay.png';
 import brandIcon from './assets/icon1.png';
 import coinIcon from './assets/coinn.png';
 import cuyIcon from './assets/cuyazoo.png';
@@ -12,8 +12,8 @@ import phoneImg from './assets/phone.jpeg';
 
 import './App.css';
 
-const GOOGLE_PLAY_URL =
-  'https://play.google.com/store/apps/details?id=com.bosatzu.frontcuyamor';
+//const GOOGLE_PLAY_URL =
+//  'https://play.google.com/store/apps/details?id=com.bosatzu.frontcuyamor';
 
 const LAUNCH_DATE = new Date('2026-09-02T00:00:00');
 
