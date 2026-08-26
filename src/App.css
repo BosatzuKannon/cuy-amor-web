@@ -313,6 +313,89 @@
   color: var(--text);
 }
 
+/* ─── Countdown Section ─── */
+.countdown-section {
+  margin-top: 12px;
+}
+
+.countdown-headline {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 24px;
+  background: linear-gradient(135deg, var(--white) 0%, #ffd700 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.countdown-grid {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 16px 18px 12px;
+  min-width: 68px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow:
+    0 0 20px rgba(255, 215, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.countdown-value {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -1px;
+  text-shadow: 0 0 16px rgba(255, 215, 0, 0.35);
+}
+
+.countdown-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+/* ─── TikTok CTA ─── */
+.tiktok-cta-text {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  margin: 0 0 14px;
+}
+
+.tiktok-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tiktok-link:hover {
+  transform: translateY(-2px) scale(1.08);
+}
+
+.tiktok-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: block;
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 960px) {
   .hero {
@@ -333,6 +416,24 @@
 
   .headline {
     font-size: 36px;
+  }
+
+  .countdown-headline {
+    font-size: 24px;
+  }
+
+  .countdown-grid {
+    gap: 10px;
+  }
+
+  .countdown-unit {
+    padding: 12px 14px 10px;
+    min-width: 56px;
+    border-radius: 12px;
+  }
+
+  .countdown-value {
+    font-size: 28px;
   }
 
   .phone-frame {
@@ -369,6 +470,23 @@
 
   .subtext {
     font-size: 15px;
+  }
+
+  .countdown-headline {
+    font-size: 20px;
+  }
+
+  .countdown-grid {
+    gap: 8px;
+  }
+
+  .countdown-unit {
+    padding: 10px 12px 8px;
+    min-width: 48px;
+  }
+
+  .countdown-value {
+    font-size: 24px;
   }
 
   .cta-badge {

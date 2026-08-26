@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import googlePlayBtn from './assets/googleplay.png';
 import brandIcon from './assets/icon1.png';
@@ -6,6 +6,7 @@ import coinIcon from './assets/coinn.png';
 import cuyIcon from './assets/cuyazoo.png';
 import iconvip from './assets/iconvip.png';
 import ninjaIcon from './assets/ninjaa.png';
+import tiktokIcon from './assets/tiktok.webp';
 import zumbidoIcon from './assets/zumbidoo.png';
 import phoneImg from './assets/phone.jpeg';
 
@@ -13,6 +14,27 @@ import './App.css';
 
 const GOOGLE_PLAY_URL =
   'https://play.google.com/store/apps/details?id=com.bosatzu.frontcuyamor';
+
+const LAUNCH_DATE = new Date('2026-09-02T00:00:00');
+
+function useCountdown(target: Date) {
+  const [remaining, setRemaining] = useState(() => Math.max(0, target.getTime() - Date.now()));
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setRemaining(Math.max(0, target.getTime() - Date.now()));
+    }, 1000);
+    return () => clearInterval(id);
+  }, [target]);
+
+  const totalSeconds = Math.floor(remaining / 1000);
+  return {
+    days: Math.floor(totalSeconds / 86400),
+    hours: Math.floor((totalSeconds % 86400) / 3600),
+    minutes: Math.floor((totalSeconds % 3600) / 60),
+    seconds: totalSeconds % 60,
+  };
+}
 
 function Modal({
   open,
@@ -42,6 +64,7 @@ function Modal({
 export default function App() {
   const [isPrivacyOpen, setPrivacyOpen] = useState(false);
   const [isTermsOpen, setTermsOpen] = useState(false);
+  const countdown = useCountdown(LAUNCH_DATE);
 
   return (
     <div className="landing">
@@ -65,6 +88,8 @@ export default function App() {
             ser el inicio de algo extraordinario.
           </p>
 
+          {/* ─── CTA (hidden during closed beta) ─── */}
+          {/*
           <a
             href={GOOGLE_PLAY_URL}
             target="_blank"
@@ -77,6 +102,43 @@ export default function App() {
               className="cta-badge"
             />
           </a>
+          */}
+
+          <div className="countdown-section">
+            <h2 className="countdown-headline">¡Próximamente disponible!</h2>
+
+            <div className="countdown-grid">
+              {[
+                { value: countdown.days, label: 'D' },
+                { value: countdown.hours, label: 'H' },
+                { value: countdown.minutes, label: 'M' },
+                { value: countdown.seconds, label: 'S' },
+              ].map((unit) => (
+                <div key={unit.label} className="countdown-unit">
+                  <span className="countdown-value">
+                    {String(unit.value).padStart(2, '0')}
+                  </span>
+                  <span className="countdown-label">{unit.label}</span>
+                </div>
+              ))}
+            </div>
+
+            <p className="tiktok-cta-text">
+              Síguenos y entérate del lanzamiento oficial:
+            </p>
+            <a
+              href="https://www.tiktok.com/@cuy.amor.app?_r=1&_t=ZS-99DNl7vPKEi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tiktok-link"
+            >
+              <img
+                src={tiktokIcon}
+                alt="TikTok"
+                className="tiktok-icon"
+              />
+            </a>
+          </div>
         </div>
 
         <div className="hero-right">
